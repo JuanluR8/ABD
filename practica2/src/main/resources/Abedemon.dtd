@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT bd-abedemon (especie*, ataque*)>
+<!ELEMENT especie (nombre, url, descripcion, tipo+, ataques*, evoluciones*)>
+<!ELEMENT tiene-ataque EMPTY>
+<!ELEMENT ataques (tiene-ataque+)>
+<!ELEMENT evoluciones (especie*)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT ataque (nombre, daño+)>
+<!ELEMENT tipo (#PCDATA)>
+<!ELEMENT daño (#PCDATA)>
+
+<!ATTLIST especie id ID #REQUIRED>
+<!ATTLIST tiene-ataque id IDREF #REQUIRED>
+<!ATTLIST ataque id ID #REQUIRED>
+<!ATTLIST daño tipo CDATA #REQUIRED>
+<!ATTLIST daño valor CDATA #REQUIRED>
